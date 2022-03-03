@@ -1,0 +1,21 @@
+﻿@model DateTime
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h4 class="display-4">Output Caching on .NET Core</h4>
+    <div class="col-md-6 mx-auto shadow p-3">
+        <div class="my-2">
+            <b>Current DateTime returned by controller : </b>@Model.ToString();
+        </div>
+        <div class="my-2">
+            <b>Current actual DateTime : </b><span id="datetime"></span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    document.getElementById("datetime").innerHTML = new Date().toLocaleString();
+</script>
